@@ -1,3 +1,5 @@
+//for4.c
+
 //별찍기
 #include <stdio.h>
 
