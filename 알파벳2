@@ -1,12 +1,13 @@
 //for6.c 2~100 소수(primeNumber) 출력하기 및 성능테스트
 
 #include <stdio.h>
+#include <math.h>//수학 함수 선언
 
 int main(void) {//prime Number출력, 개수, 반복회수 출력, sw[switch역할]
 	int pnCnt=0, reCnt=0;//소수개수, 반복회수 - 증감연산 해야하므로 0선언
-		for (int i = 2; i <= 100; i++) { //4851번, 25개 , 2. break 추가 1133으로 줄어듬
+		for (int i = 2; i <= 100; i++) { //1.4851번, 25개 , 2. break 추가 1133번으로 줄어듬, 3. 반추가 616번, 4.제곱근 236번
 			int sw = 0;//지역변수와 전역변수
-			for (int j = 2; j < i; j++) {
+			for (int j = 2; j <= sqrt(i); j++) {//sqrt()제곱근을 구하는 함수
 				reCnt++;
 				if (i % j == 0) {//i는 소수 아님.
 					sw = 1;
