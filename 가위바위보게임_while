@@ -1,0 +1,88 @@
+//가위바위보게임 while.c
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main(void) {
+
+	int user, com, result, tCnt=0, wCnt=0, lCnt=0;
+
+	while (1) {
+		printf("사용자 입력: 0(가위), 1(바위), 2(보) 9(종료): ");
+		scanf_s("%d", &user);
+
+		if (user == 9) {
+			printf("Game Over!!!\n");
+			break;
+		}
+		else if (user < 0 || user>2) {
+			printf("보고도 못 치냐\n");
+			continue;
+		}
+		else {
+			tCnt++;
+		}
+		srand((unsigned)time(NULL));
+		com = rand() % 3;
+
+		result = user - com;
+
+		if (user == 0) {
+
+			printf("너 가위냈어!!!\n");
+
+		}
+
+		else if (user == 1) {
+
+			printf("너 바위냈어!!!\n");
+
+		}
+
+		else if (user == 2) {
+
+			printf("너 보냈어!!!\n");
+
+		}
+
+		else {
+
+			printf("눈없어 ㅡㅡ^ 넌 게임하지마!!!\n");
+
+			continue;
+
+		}
+
+
+
+		if (com == 0) {
+
+			printf("컴퓨터 가위냈어!!!\n");
+
+		}
+
+		else if (com == 1) {
+
+			printf("컴퓨터 바위냈어!!!\n");
+
+		}
+
+		else {
+
+			printf("컴퓨터 보냈어!!!\n");
+
+		}
+
+		if (result == -2 || result == 1) {
+			printf("You Win~~~ \\o/\\o/\\o/\n");
+			wCnt++;
+		}
+		else {
+			printf("You die~~~ OTL\n");
+			lCnt++;
+		}
+	}
+	printf("게임결과: %d전 %d승 %d패, 승률:%.2lf%%\n", tCnt, wCnt, lCnt, (double)wCnt / tCnt * 100);
+
+	return 0;
+}
