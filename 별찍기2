@@ -77,3 +77,48 @@ int main(void) {
 //
 //	return 0;
 //}
+
+//숫자 크키만큼 반복 0이면 종료
+	int n;
+	for(;;){//while (1) {//무한반복
+		system("cls");
+		printf("size:");
+		scanf_s("%d", &n);
+		if (n == 0) {
+			printf("The end!!!\n");
+			break;
+		}
+		for (int i = 1; i <= n; i++) { //행, 줄
+			for (int j = 1; j <= n - i; j++) {//열, 칸, 공백
+				printf(" ");
+			}
+			for (int j = 1; j <= i * 2 - 1; j++) { //열, 칸, 별칸
+				if (j == 1 || j == i * 2 - 1) {
+					printf("*");
+				}
+				else {
+					printf(" ");
+				}
+			}
+			printf("\n");
+		}
+		for (int i = 1; i <= n; i++) { //행, 줄
+			for (int j = 1; j <= i; j++) {//열, 칸
+				printf(" ");
+			}
+			for (int j = 1; j <= (n - i) * 2 - 1; j++) {//열, 칸, 별칸
+				if (j == 1 || j == (n - i) * 2 - 1) {
+					printf("*");
+				}
+				else {
+					printf(" ");
+				}
+			}
+			printf("\n");
+		}
+		system("pause");//화면 일시중지
+	}
+
+	return 0;
+}	
+
