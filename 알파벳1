@@ -1,4 +1,4 @@
-//for6.c
+//for5.c
 //과제: 숫자를 입력 받아서 사이즈(홀수)만큼의 크기를 출력 0이면 종료
 #include <stdio.h>
 #include <stdlib.h>
