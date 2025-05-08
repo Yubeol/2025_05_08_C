@@ -1,0 +1,50 @@
+//while2.c 중국집 메뉴멘들기 포스(POS:Point Of Sales System 판매시점)
+//while(for) : 선비교후 후수행[처음에 조건이 틀렸을때 0번 수행]
+//그럼 반드시 한번은 무조건 수행하게 해야 할때는?
+//do-while : 선수행 후비교[최소 1번 수행]
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int sel, dish;
+	
+	do {
+		system("cls");
+		printf("=== menu ===\n");
+		printf("1.짜장면\n");
+		printf("2.짬뽕\n");
+		printf("3.우동[품절]\n");
+		printf("4.볶음밥\n");
+		printf("5.탕수육\n");
+		printf("0.종료\n");
+		printf("==========\n");
+		printf("선택:");
+		scanf_s("%d", &sel);
+		printf("몇그릇:");
+		scanf_s("%d", &dish);
+
+		switch (sel) {
+		case 0:
+			printf("감사합니다.\n");
+			break;
+		case 1:
+			printf("짜장면 %d그릇, 가격 %d원 * %d = %d원\n", dish, 5000, dish, 5000 * dish);
+			break;
+		case 2:
+			printf("짬뽕 %d그릇, 가격 %d원 * %d = %d원\n", dish, 6000, dish, 6000 * dish);
+			break;
+		case 4:
+			printf("볶음밥 %d그릇, 가격 %d원 * %d = %d원\n", dish, 8000, dish, 8000 * dish);
+			break;
+		case 5:
+			printf("탕수육 %d그릇, 가격 %d원 * %d = %d원\n", dish, 16000, dish, 16000 * dish);
+			break;
+		default:
+			printf("잘못 선택하셨습니다. 다시 선택해 주세요.");
+		}
+		system("pause");
+	} while (sel != 0);
+
+	return 0;
+}
