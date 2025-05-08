@@ -1,0 +1,22 @@
+//for6.c 2~100 소수(primeNumber) 출력하기 및 성능테스트
+
+#include <stdio.h>
+
+int main(void) {//prime Number출력, 개수, 반복회수 출력, sw[switch역할]
+	int pnCnt=0, reCnt=0;//소수개수, 반복회수 - 증감연산 해야하므로 0선언
+		for (int i = 2; i <= 100; i++) { //4851번, 25개
+			int sw = 0;//지역변수와 전역변수
+			for (int j = 2; j < i; j++) {
+				if (i % j == 0) {//i는 소수 아님.
+					sw = 1;
+				}
+			}
+			if (sw == 0) {
+				printf("prime number %d\n", i);
+				pnCnt++;
+			}
+		}
+		printf("1부터 100사의 소수의 개수는 %d[%d번 돌았어]개이다.\n", pnCnt, reCnt);
+	return 0;
+}
+
