@@ -49,25 +49,31 @@ int main(void) {
 //	return 0;
 //}
 
-	for (int i = 1; i <= 5; i++) { //행, 줄
-		for (int j = 1; j <= 5 - i; j++) {//열, 칸, 공백
-			printf(" ");
-		}
-		for (int j = 1; j <= i * 2 - 1; j++) { //열, 칸, 별칸
-			
-			printf("*");
-		}
-		printf("\n");
-	}
-	for (int i = 1; i <= 5; i++) { //행, 줄
-		for (int j = 1; j <= i; j++) {//열, 칸
-			printf(" ");
-		}
-		for (int j = 1; j <= (5 - i) * 2 - 1; j++) {//열, 칸, 별칸
-			printf("*");
-		}
-		printf("\n");
-	}
-
-	return 0;
-}
+//가운데 별 공백
+//	for (int i = 1; i <= 5; i++) { //행, 줄
+//		for (int j = 1; j <= 5 - i; j++) {//열, 칸, 공백
+//			printf(" ");
+//		}
+//		for (int j = 1; j <= i * 2 - 1; j++) { //열, 칸, 별칸
+//			if (j == 1 || j == i * 2 - 1) {
+//				printf("*");
+//			}
+//			else printf(" ");
+//		}
+//		printf("\n");
+//	}
+//	for (int i = 1; i <= 4; i++) { //행, 줄
+//		for (int j = 1; j <= i; j++) {//열, 칸
+//			printf(" ");
+//		}
+//		for (int j = 1; j <= (5 - i) * 2 - 1; j++) {//열, 칸, 별칸
+//			if (j == 1 || j == (5 - i) * 2 - 1) {
+//				printf("*");
+//			}
+//			else printf(" ");
+//		}
+//		printf("\n");
+//	}
+//
+//	return 0;
+//}
