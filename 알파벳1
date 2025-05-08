@@ -1,0 +1,29 @@
+//for6.c
+//과제: 숫자를 입력 받아서 사이즈(홀수)만큼의 크기를 출력 0이면 종료
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int n;
+	for (;;) {//while (1) {//무한반복
+		system("cls");
+		printf("size:");
+		scanf_s("%d", &n);
+		if (n == 0) {
+			printf("The end!!!\n");
+			break;
+		}
+		for (int i = 65; i <= 90; i++) { //행, 줄 아스키 코드 65 = 'A', 90 = 'Z'
+			for (int j = i; j <= 90; j++) {//열, 칸
+				printf("%c ", j);
+			}
+			for (int j = 65; j < i; j++) {
+				printf("%c ", j);
+			}
+			printf("\n");
+		}
+		system("pause");
+	}
+	return 0;
+}
+
